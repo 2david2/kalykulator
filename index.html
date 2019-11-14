@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button2{
+            margin-left: 20px;
+             height: 50px;
+            width: 50px;
+        }
+        .button{
+            height: 50px;
+            width: 50px;
+        }
+        .chislo{
+         margin-right:35px;
+            height: 50px;
+            width: 50px;
+        }
+        .chislo2{
+           margin-left:70px;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1 id="div"> </h1>
+    <div class="row">
+        <button onclick="tap(this.id)" class="button" id="1">1</button>
+        <button onclick="tap(this.id)" class="button" id="2">2</button>
+        <button onclick="tap(this.id)" class="button" id="3">3</button>
+        <button onclick="sbros()" class="button2">C</button>
+        <button onclick="equally()" class="button">=</button>
+    </div>
+
+    <button onclick="tap(this.id)" class="button" id="4">4</button>
+    <button onclick="tap(this.id)" class="button" id="5">5</button>
+    <button onclick="tap(this.id)" class="button" id="6">6</button>
+    <button onclick="tap(this.id)" class="button2" id="+">+</button>
+    <button onclick="tap(this.id)" class="button" id="-">-</button>
+   </br>
+    <button onclick="tap(this.id)" class="button"id="7">7</button>
+    <button onclick="tap(this.id)" class="button"id="8">8</button>
+    <button onclick="tap(this.id)" class="button"id="9">9</button>
+    <button onclick="tap(this.id)" class="button2"id="*">*</button>
+    <button onclick="tap(this.id)" class="button"id="/">/</button>
+    </br>
+ <button onclick="kn0()" class="chislo">0</button>
+
+<button class="chislo2" onclick="delete_from_input()">delete</button>
+<script>
+function tap(clicked_id) {
+    document.getElementById("div").innerHTML += document.getElementById(clicked_id).innerHTML
+}
+
+function equally() {
+    document.getElementById("div").innerHTML = eval(document.getElementById("div").innerHTML)
+}
+function sbros() {
+     document.getElementById("div").innerHTML=""
+}
+
+function delete_from_input() {
+    document.getElementById("div").innerHTML = document.getElementById("div").innerHTML.slice(0, -1)
+}
+</script>
+
+</center>
+</body>
+</html>
